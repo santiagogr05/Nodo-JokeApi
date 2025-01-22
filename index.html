@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke API</title>
+    <link rel="stylesheet" href="index-styles.css">
+</head>
+<body>
+
+    <header >
+
+        <h1 class="heading" >Joke API</h1>
+
+    </header>
+
+    <body>
+        <main>
+            
+            <div class="container">
+
+                <button id="language" class="language">EN</button>
+
+
+                <div class="datalist-container">
+                    <label for="joke-types">Joke type</label>
+                    <input list="joke-types" name="joke-type-choise" id="joke-type-choise" value="Any" onfocus="this.value=''" > <!-- onfocus="this.value=''"  => helps to improve the experience when trying to change the joke type -->
+                    <datalist id="joke-types" class="joke-types">                
+                        <option value="Any"></option>
+                        <option value="Programming"></option>
+                        <option value="Miscellaneous"></option>
+                        <option value="Dark"></option>
+                        <option value="Pun"></option>
+                        <option value="Spooky"></option>
+                        <option value="Christmas"></option>
+                    </datalist>
+                </div>
+                
+
+                <div class="joke-container">
+
+                    <!-- One line jokes => type: "single"  -->
+                    <p id="joke" class="joke"></p> <!-- default text for testing -->
+
+                    <!-- Q&A jokes => type: "twopart"-->
+                    <p id="setup" class="setup"></p> <!-- If this kind of joke appears must have a button to show the other part -->
+                    <p id="delivery" class="delivery"></p>
+                    <button id="show-delivery" class="show-delivery">Show</button>
+
+                </div>
+
+
+                <button id="show-joke">Drop a joke</button>
+
+            </div>
+
+        </main>  
+    </body>
+
+    <footer>
+
+        <p>For build your own .. <br> visit official <strong>API</strong> website <a href="https://v2.jokeapi.dev" target="_blank">https://v2.jokeapi.dev</a></p>
+
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
