@@ -64,5 +64,6 @@ showJoke.addEventListener('click', () => {
     deliveryButton.style.display = 'none'
     deliveryJoke.style.display = 'none';
     singleJoke.style.display = 'block';
+    singleJoke.innerHTML = '';
     determineJoke();
 });
