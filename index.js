@@ -21,7 +21,10 @@ langButton.addEventListener('click', () => {
 
 const getJoke = async () => {
 
-    const jokeType = document.getElementById('joke-type-choise').value;
+    let jokeType = document.getElementById('joke-type-choise').value;
+
+    if (jokeType == '')
+        jokeType = 'Any';
 
     if (langButton.innerHTML == 'EN'){
         const response = await fetch(`https://v2.jokeapi.dev/joke/${jokeType}`);
@@ -54,10 +57,7 @@ const determineJoke = async () => {
         deliveryButton.style.display = 'block';
           
     }
-
-    
 }
-
 
 showJoke.addEventListener('click', () => {
     setupJoke.style.display = 'none';
